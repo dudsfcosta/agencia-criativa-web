@@ -1,0 +1,162 @@
+/* css reset */
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    
+    --cor-primaria: #f9f9f9;
+    --cor-lilas: rgba(169, 104, 237, 1);
+    --cor-rosa: rgba(245, 130, 174, 1);
+    --cor-branca: #fafafa;
+    --cor-preta: #10001F;
+    --fonte-principal: "Roboto", sans-serif;
+}
+
+/* Geral */
+body {
+    
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    background-color: var(--cor-primaria);
+}
+
+/* Header */
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5vw;
+    background: var(--cor-branca);
+}
+
+.logo {
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu a {
+    
+    text-decoration: none;
+    color: var(--cor-preta);
+}
+
+/* Home */
+.home {
+    
+    height: 50vh;
+    background: linear-gradient(0deg, var(--cor-lilas) 0%, var(--cor-rosa) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Seções */
+section {
+    
+    padding: 4rem 5vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Serviços - CSS Grid */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--cor-branca);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Depoimentos */
+.depoimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+blockquote {
+    max-width: 300px;
+    background: white;
+    padding: 1.5rem;
+    border-left: 5px solid var(--cor-lilas);
+    border-radius: 8px;
+}
+
+/* Contato */
+.contato-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.8rem;
+    background: var(--cor-rosa);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    
+    background: var(--cor-lilas);
+}
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--cor-preta);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
